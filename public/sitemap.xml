@@ -2,33 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:62129/archives/</loc>
+    <loc>http://localhost:1313/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62129/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62129/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:62129/categories/c%23/</loc>
+    <loc>http://localhost:1313/categories/c%23/</loc>
   </url><url>
-    <loc>http://localhost:62129/p/unity01/</loc>
+    <loc>http://localhost:1313/p/unity01/</loc>
   </url><url>
-    <loc>http://localhost:62129/p/unity03/</loc>
+    <loc>http://localhost:1313/p/unity03/</loc>
   </url><url>
-    <loc>http://localhost:62129/p/unity02/</loc>
+    <loc>http://localhost:1313/p/unity04/</loc>
   </url><url>
-    <loc>http://localhost:62129/categories/</loc>
+    <loc>http://localhost:1313/p/unity02/</loc>
   </url><url>
-    <loc>http://localhost:62129/links/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:62129/post/</loc>
+    <loc>http://localhost:1313/links/</loc>
   </url><url>
-    <loc>http://localhost:62129/search/</loc>
+    <loc>http://localhost:1313/post/</loc>
   </url><url>
-    <loc>http://localhost:62129/tags/</loc>
+    <loc>http://localhost:1313/search/</loc>
   </url><url>
-    <loc>http://localhost:62129/tags/unity-%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0/</loc>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/unity-%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0/</loc>
   </url>
 </urlset>
