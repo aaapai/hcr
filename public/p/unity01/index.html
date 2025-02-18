@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="变量\r变量包括引用类型和值类型\r1.内存分配：\n值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据\n引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。\n2.生命周期\n值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 3.装箱与拆箱\n装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。\n拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换\n4.类型举例\n值类型：int float bool char double struct enum等，默认值不为空\n引用类型：class string interface delegate array等，默认值为null\n类型总结\r值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好\n引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。\n变量作用域\r变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见 静态变量是类级别上声明的整个类中可见\n">
-<title>C#语法</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="变量\r变量包括引用类型和值类型\r1.内存分配：\n值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据\n引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。 2.生命周期\n值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 3.装箱与拆箱\n装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。\n拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换 4.类型举例\n值类型：int float bool char double struct enum等，默认值不为空\n引用类型：class string interface delegate array等，默认值为null 类型总结\r值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好 引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。 变量作用域\r变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见 静态变量是类级别上声明的整个类中可见\n小补充：对于值类型如果要让他可空，直接在类型后加一个?即可\r1 int? i; ">
+<title>C#语法_变量</title>
 
 <link rel='canonical' href='http://localhost:1313/p/unity01/'>
 
-<link rel="stylesheet" href="/scss/style.min.b303a68274bee2734650a20cbd1263b6f734092995cba66de1b70f7637692147.css"><meta property='og:title' content="C#语法">
-<meta property='og:description' content="变量\r变量包括引用类型和值类型\r1.内存分配：\n值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据\n引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。\n2.生命周期\n值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 3.装箱与拆箱\n装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。\n拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换\n4.类型举例\n值类型：int float bool char double struct enum等，默认值不为空\n引用类型：class string interface delegate array等，默认值为null\n类型总结\r值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好\n引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。\n变量作用域\r变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见 静态变量是类级别上声明的整个类中可见\n">
+<link rel="stylesheet" href="/scss/style.min.b303a68274bee2734650a20cbd1263b6f734092995cba66de1b70f7637692147.css"><meta property='og:title' content="C#语法_变量">
+<meta property='og:description' content="变量\r变量包括引用类型和值类型\r1.内存分配：\n值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据\n引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。 2.生命周期\n值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 3.装箱与拆箱\n装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。\n拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换 4.类型举例\n值类型：int float bool char double struct enum等，默认值不为空\n引用类型：class string interface delegate array等，默认值为null 类型总结\r值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好 引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。 变量作用域\r变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见 静态变量是类级别上声明的整个类中可见\n小补充：对于值类型如果要让他可空，直接在类型后加一个?即可\r1 int? i; ">
 <meta property='og:url' content='http://localhost:1313/p/unity01/'>
 <meta property='og:site_name' content='黄春荣'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='unity 面试复习' />
-<meta name="twitter:title" content="C#语法">
-<meta name="twitter:description" content="变量\r变量包括引用类型和值类型\r1.内存分配：\n值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据\n引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。\n2.生命周期\n值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 3.装箱与拆箱\n装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。\n拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换\n4.类型举例\n值类型：int float bool char double struct enum等，默认值不为空\n引用类型：class string interface delegate array等，默认值为null\n类型总结\r值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好\n引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。\n变量作用域\r变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见 静态变量是类级别上声明的整个类中可见\n">
+<meta name="twitter:title" content="C#语法_变量">
+<meta name="twitter:description" content="变量\r变量包括引用类型和值类型\r1.内存分配：\n值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据\n引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。 2.生命周期\n值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 3.装箱与拆箱\n装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。\n拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换 4.类型举例\n值类型：int float bool char double struct enum等，默认值不为空\n引用类型：class string interface delegate array等，默认值为null 类型总结\r值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好 引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。 变量作用域\r变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见 静态变量是类级别上声明的整个类中可见\n小补充：对于值类型如果要让他可空，直接在类型后加一个?即可\r1 int? i; ">
     </head>
     <body class="
     article-page
@@ -234,6 +234,7 @@
           </ol>
         </li>
         <li><a href="#变量作用域">变量作用域</a></li>
+        <li><a href="#小补充对于值类型如果要让他可空直接在类型后加一个即可">小补充：对于值类型如果要让他可空，直接在类型后加一个?即可</a></li>
       </ol>
     </li>
   </ol>
@@ -263,7 +264,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/unity01/">C#语法</a>
+            <a href="/p/unity01/">C#语法_变量</a>
         </h2>
     
         
@@ -304,24 +305,37 @@
     
     <h2 id="变量"><em><strong>变量</strong></em>
 </h2><h3 id="变量包括引用类型和值类型">变量包括引用类型和值类型
-</h3><p>1.内存分配：<br>
+</h3><ul>
+<li>1.内存分配：<br>
 值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据<br>
-引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。<br>
-2.生命周期<br>
-值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 <br>
-3.装箱与拆箱<br>
+引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。</li>
+<li>2.生命周期<br>
+值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。</li>
+<li>3.装箱与拆箱<br>
 装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。<br>
-拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换<br>
-4.类型举例<br>
+拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换</li>
+<li>4.类型举例<br>
 值类型：int float bool char double struct enum等，默认值不为空<br>
-引用类型：class string interface delegate array等，默认值为null</p>
+引用类型：class string interface delegate array等，默认值为null</li>
+</ul>
 <h4 id="类型总结"><em><strong>类型总结</strong></em>
-</h4><p>值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好<br>
-引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。</p>
+</h4><ul>
+<li>值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好</li>
+<li>引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。</li>
+</ul>
 <h3 id="变量作用域">变量作用域
 </h3><p>变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见
 静态变量是类级别上声明的整个类中可见</p>
-
+<h3 id="小补充对于值类型如果要让他可空直接在类型后加一个即可">小补充：对于值类型如果要让他可空，直接在类型后加一个?即可
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kt">int?</span> <span class="n">i</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -363,12 +377,12 @@
             
                 
 <article class="">
-    <a href="/p/unity02/">
+    <a href="/p/unity03/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">C#语法</h2>
+            <h2 class="article-title">C#语法_方法</h2>
         </div>
     </a>
 </article>
@@ -376,12 +390,12 @@
             
                 
 <article class="">
-    <a href="/p/unity03/">
+    <a href="/p/unity02/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">C#语法</h2>
+            <h2 class="article-title">C#语法_访问修饰符和封装</h2>
         </div>
     </a>
 </article>
@@ -550,6 +564,15 @@
         document.head.appendChild(customFont);
     }());
 </script>
+<style>
+  body {
+    background: url(http://localhost:1313/background/my.png) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+<script src=http://localhost:1313/background/sakura.js></script>
+
 
     </body>
 </html>

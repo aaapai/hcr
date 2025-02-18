@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="访问修饰符\rpublic:在所有地方都可以访问，没有访问限制 private:在类内部可以访问 protected:在类内部以及派生类访问 internal:在程序集内部访问，同一个程序时相当于public protected internal 封装\r封装是一种面向对象编程的基本概念，将数据和操作数据的方法绑定在一起，并通过访问修饰符控制对类成员的访问。 例如，将字段声明为private，并提供public方法或属性来间接访问这些字段。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 public class Person { private string name; //法一 public string Name { get { return name; } set { if (!string.IsNullOrEmpty(value)) name = value; else throw new ArgumentException(&#34;Name cannot be null or empty&#34;); } } //法二 public string GetName() { return name; } } ">
-<title>C#语法_访问修饰符和封装</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="方法\r结构： 访问修饰符 返回类型 函数名(参数列表){代码块} 1 2 3 4 public int GetName(int a){ a++; return a; } 参数列表：\n">
+<title>C#语法</title>
 
-<link rel='canonical' href='http://localhost:1313/p/unity02/'>
+<link rel='canonical' href='http://localhost:1313/p/unity03_%E6%96%B9%E6%B3%95/'>
 
-<link rel="stylesheet" href="/scss/style.min.b303a68274bee2734650a20cbd1263b6f734092995cba66de1b70f7637692147.css"><meta property='og:title' content="C#语法_访问修饰符和封装">
-<meta property='og:description' content="访问修饰符\rpublic:在所有地方都可以访问，没有访问限制 private:在类内部可以访问 protected:在类内部以及派生类访问 internal:在程序集内部访问，同一个程序时相当于public protected internal 封装\r封装是一种面向对象编程的基本概念，将数据和操作数据的方法绑定在一起，并通过访问修饰符控制对类成员的访问。 例如，将字段声明为private，并提供public方法或属性来间接访问这些字段。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 public class Person { private string name; //法一 public string Name { get { return name; } set { if (!string.IsNullOrEmpty(value)) name = value; else throw new ArgumentException(&#34;Name cannot be null or empty&#34;); } } //法二 public string GetName() { return name; } } ">
-<meta property='og:url' content='http://localhost:1313/p/unity02/'>
+<link rel="stylesheet" href="/scss/style.min.b303a68274bee2734650a20cbd1263b6f734092995cba66de1b70f7637692147.css"><meta property='og:title' content="C#语法">
+<meta property='og:description' content="方法\r结构： 访问修饰符 返回类型 函数名(参数列表){代码块} 1 2 3 4 public int GetName(int a){ a++; return a; } 参数列表：\n">
+<meta property='og:url' content='http://localhost:1313/p/unity03_%E6%96%B9%E6%B3%95/'>
 <meta property='og:site_name' content='黄春荣'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='unity 面试复习' />
-<meta name="twitter:title" content="C#语法_访问修饰符和封装">
-<meta name="twitter:description" content="访问修饰符\rpublic:在所有地方都可以访问，没有访问限制 private:在类内部可以访问 protected:在类内部以及派生类访问 internal:在程序集内部访问，同一个程序时相当于public protected internal 封装\r封装是一种面向对象编程的基本概念，将数据和操作数据的方法绑定在一起，并通过访问修饰符控制对类成员的访问。 例如，将字段声明为private，并提供public方法或属性来间接访问这些字段。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 public class Person { private string name; //法一 public string Name { get { return name; } set { if (!string.IsNullOrEmpty(value)) name = value; else throw new ArgumentException(&#34;Name cannot be null or empty&#34;); } } //法二 public string GetName() { return name; } } ">
+<meta name="twitter:title" content="C#语法">
+<meta name="twitter:description" content="方法\r结构： 访问修饰符 返回类型 函数名(参数列表){代码块} 1 2 3 4 public int GetName(int a){ a++; return a; } 参数列表：\n">
     </head>
     <body class="
     article-page
@@ -228,8 +228,7 @@
   <ol>
     <li>
       <ol>
-        <li><a href="#访问修饰符">访问修饰符</a></li>
-        <li><a href="#封装">封装</a></li>
+        <li><a href="#方法">方法</a></li>
       </ol>
     </li>
   </ol>
@@ -259,7 +258,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/unity02/">C#语法_访问修饰符和封装</a>
+            <a href="/p/unity03_%E6%96%B9%E6%B3%95/">C#语法</a>
         </h2>
     
         
@@ -298,68 +297,26 @@
     <section class="article-content">
     
     
-    <h3 id="访问修饰符">访问修饰符
+    <h3 id="方法">方法
 </h3><ul>
-<li>public:在所有地方都可以访问，没有访问限制</li>
-<li>private:在类内部可以访问</li>
-<li>protected:在类内部以及派生类访问</li>
-<li>internal:在程序集内部访问，同一个程序时相当于public</li>
-<li>protected internal</li>
+<li>结构： 访问修饰符 返回类型 函数名(参数列表){代码块}</li>
 </ul>
-<h3 id="封装">封装
-</h3><p>封装是一种面向对象编程的基本概念，将数据和操作数据的方法绑定在一起，并通过访问修饰符控制对类成员的访问。
-例如，将字段声明为private，并提供public方法或属性来间接访问这些字段。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">Person</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">	
-</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kt">string</span> <span class="n">name</span><span class="p">;</span>  
-</span></span><span class="line"><span class="cl">    <span class="c1">//法一</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">Name</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">name</span><span class="p">;</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">set</span> 
-</span></span><span class="line"><span class="cl">        <span class="p">{</span> 
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="k">value</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">                <span class="n">name</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="k">else</span>
-</span></span><span class="line"><span class="cl">                <span class="k">throw</span> <span class="k">new</span> <span class="n">ArgumentException</span><span class="p">(</span><span class="s">&#34;Name cannot be null or empty&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">//法二</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">GetName</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">   <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kt">int</span> <span class="n">GetName</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="n">a</span><span class="p">++;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">a</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div>
+</div><p>参数列表：</p>
+
 </section>
 
 
@@ -414,12 +371,12 @@
             
                 
 <article class="">
-    <a href="/p/unity03/">
+    <a href="/p/unity02/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">C#语法_方法</h2>
+            <h2 class="article-title">C#语法_访问修饰符和封装</h2>
         </div>
     </a>
 </article>
@@ -588,15 +545,6 @@
         document.head.appendChild(customFont);
     }());
 </script>
-<style>
-  body {
-    background: url(http://localhost:1313/background/my.png) no-repeat center top;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-</style>
-<script src=http://localhost:1313/background/sakura.js></script>
-
 
     </body>
 </html>
