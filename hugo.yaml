@@ -19,7 +19,7 @@ languages:
         weight: 1
         params:
             sidebar:
-                subtitle: 联系方式
+                subtitle: 本网站是使用hugo+stack搭建，记录下学习过的东西，将知识量化、梳理。做一个复习作用，加油！
    
    
 
@@ -206,7 +206,7 @@ menu:
           name: QQ
           url: https://qm.qq.com/q/BzIUyf6QDY
           params:
-              icon: user
+              icon: qq
 
 
 

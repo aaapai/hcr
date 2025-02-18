@@ -23,14 +23,14 @@
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/links/</loc>
-  </url><url>
     <loc>http://localhost:1313/post/</loc>
-  </url><url>
-    <loc>http://localhost:1313/search/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/unity-%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0/</loc>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+  </url><url>
+    <loc>http://localhost:1313/links/</loc>
   </url>
 </urlset>

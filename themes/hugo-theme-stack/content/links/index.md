@@ -1,5 +1,5 @@
 ---
-title: Links
+title: 链接
 links:
   - title: picoMRTK基础配置
     description: 运动,ui,抓取已配置。
