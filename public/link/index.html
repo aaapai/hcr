@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="变量\r变量包括引用类型和值类型\r1.内存分配：\n值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据\n引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。\n2.生命周期\n值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 3.装箱与拆箱\n装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。\n拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换\n4.类型举例\n值类型：int float bool char double struct enum等，默认值不为空\n引用类型：class string interface delegate array等，默认值为null\n类型总结\r值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好\n引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。\n变量作用域\r变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见 静态变量是类级别上声明的整个类中可见\n">
-<title>C#语法</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="To use this feature, add links section to frontmatter.\nThis page&rsquo;s frontmatter:\n1 2 3 4 5 6 7 8 9 links: - title: GitHub description: GitHub is the world&#39;s largest software development platform. website: https://github.com image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png - title: TypeScript description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. website: https://www.typescriptlang.org image: ts-logo-128.jpg image field accepts both local and external images.\n">
+<title>Links</title>
 
-<link rel='canonical' href='http://localhost:1313/p/my-first-post/'>
+<link rel='canonical' href='http://localhost:1313/link/'>
 
-<link rel="stylesheet" href="/scss/style.min.b303a68274bee2734650a20cbd1263b6f734092995cba66de1b70f7637692147.css"><meta property='og:title' content="C#语法">
-<meta property='og:description' content="变量\r变量包括引用类型和值类型\r1.内存分配：\n值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据\n引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。\n2.生命周期\n值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 3.装箱与拆箱\n装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。\n拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换\n4.类型举例\n值类型：int float bool char double struct enum等，默认值不为空\n引用类型：class string interface delegate array等，默认值为null\n类型总结\r值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好\n引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。\n变量作用域\r变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见 静态变量是类级别上声明的整个类中可见\n">
-<meta property='og:url' content='http://localhost:1313/p/my-first-post/'>
+<link rel="stylesheet" href="/scss/style.min.b303a68274bee2734650a20cbd1263b6f734092995cba66de1b70f7637692147.css"><meta property='og:title' content="Links">
+<meta property='og:description' content="To use this feature, add links section to frontmatter.\nThis page&rsquo;s frontmatter:\n1 2 3 4 5 6 7 8 9 links: - title: GitHub description: GitHub is the world&#39;s largest software development platform. website: https://github.com image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png - title: TypeScript description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. website: https://www.typescriptlang.org image: ts-logo-128.jpg image field accepts both local and external images.\n">
+<meta property='og:url' content='http://localhost:1313/link/'>
 <meta property='og:site_name' content='黄春荣'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='unity 面试复习' />
-<meta name="twitter:title" content="C#语法">
-<meta name="twitter:description" content="变量\r变量包括引用类型和值类型\r1.内存分配：\n值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据\n引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。\n2.生命周期\n值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 3.装箱与拆箱\n装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。\n拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换\n4.类型举例\n值类型：int float bool char double struct enum等，默认值不为空\n引用类型：class string interface delegate array等，默认值为null\n类型总结\r值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好\n引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。\n变量作用域\r变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见 静态变量是类级别上声明的整个类中可见\n">
+<meta property='og:type' content='article'><meta property='article:section' content='' />
+<meta name="twitter:title" content="Links">
+<meta name="twitter:description" content="To use this feature, add links section to frontmatter.\nThis page&rsquo;s frontmatter:\n1 2 3 4 5 6 7 8 9 links: - title: GitHub description: GitHub is the world&#39;s largest software development platform. website: https://github.com image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png - title: TypeScript description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. website: https://www.typescriptlang.org image: ts-logo-128.jpg image field accepts both local and external images.\n">
     </head>
     <body class="
     article-page
@@ -157,8 +157,8 @@
         </li>
         
         
-        <li >
-            <a href='/links/' >
+        <li  class='current' >
+            <a href='/link/' >
                 
                 
                 
@@ -204,47 +204,7 @@
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#变量"><em><strong>变量</strong></em></a>
-      <ol>
-        <li><a href="#变量包括引用类型和值类型">变量包括引用类型和值类型</a>
-          <ol>
-            <li><a href="#类型总结"><em><strong>类型总结</strong></em></a></li>
-          </ol>
-        </li>
-        <li><a href="#变量作用域">变量作用域</a></li>
-      </ol>
-    </li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
+    
 
             <main class="main full-width">
     <article class="main-article">
@@ -252,18 +212,10 @@
 
     <div class="article-details">
     
-    <header class="article-category">
-        
-            <a href="/categories/c%23/" >
-                C#
-            </a>
-        
-    </header>
-    
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/my-first-post/">C#语法</a>
+            <a href="/link/">Links</a>
         </h2>
     
         
@@ -302,37 +254,39 @@
     <section class="article-content">
     
     
-    <h2 id="变量"><em><strong>变量</strong></em>
-</h2><h3 id="变量包括引用类型和值类型">变量包括引用类型和值类型
-</h3><p>1.内存分配：<br>
-值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据<br>
-引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。<br>
-2.生命周期<br>
-值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 <br>
-3.装箱与拆箱<br>
-装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。<br>
-拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换<br>
-4.类型举例<br>
-值类型：int float bool char double struct enum等，默认值不为空<br>
-引用类型：class string interface delegate array等，默认值为null</p>
-<h4 id="类型总结"><em><strong>类型总结</strong></em>
-</h4><p>值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好<br>
-引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。</p>
-<h3 id="变量作用域">变量作用域
-</h3><p>变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见
-静态变量是类级别上声明的整个类中可见</p>
+    <p>To use this feature, add <code>links</code> section to frontmatter.</p>
+<p>This page&rsquo;s frontmatter:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">links</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">GitHub</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">GitHub is the world&#39;s largest software development platform.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">website</span><span class="p">:</span><span class="w"> </span><span class="l">https://github.com</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">TypeScript</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">website</span><span class="p">:</span><span class="w"> </span><span class="l">https://www.typescriptlang.org</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">ts-logo-128.jpg</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>image</code> field accepts both local and external images.</p>
 
 </section>
 
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/unity-%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0/">Unity 面试复习</a>
-        
-    </section>
-
 
     
     <section class="article-copyright">
@@ -353,54 +307,58 @@
 </article>
 
     
+        <div class="article-list--compact links">
+    
+        <article>
+            <a href="https://gitee.com/huangpaipai/mrtk_-pico-template.git" target="_blank" rel="noopener">
+                <div class="article-details">
+                    <h2 class="article-title">picoMRTK基础配置</h2>
+                    <footer class="article-time">
+                        
+                            运动,ui,抓取已配置。
+                        
+                    </footer>
+                </div>
+        
+                
+                    
+                    
+                    <div class="article-image">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" loading="lazy">
+                    </div>
+                
+            </a>
+        </article>
+    
+        <article>
+            <a href="https://www.typescriptlang.org" target="_blank" rel="noopener">
+                <div class="article-details">
+                    <h2 class="article-title">TypeScript</h2>
+                    <footer class="article-time">
+                        
+                            TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+                        
+                    </footer>
+                </div>
+        
+                
+                    
+                    
+                        
+                    
+                    <div class="article-image">
+                        <img src="/link/ts-logo-128.jpg" loading="lazy">
+                    </div>
+                
+            </a>
+        </article>
+    
+</div>
+    
 
     
 
      
-    
-        
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (typeof DISQUS == 'object') {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
-</script>
-
     
 
     <footer class="site-footer">

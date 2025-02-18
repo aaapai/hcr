@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on 黄春荣</title>
-        <link>http://localhost:55744/post/</link>
+        <link>http://localhost:1313/post/</link>
         <description>Recent content in Posts on 黄春荣</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>unity复习手册</copyright><atom:link href="http://localhost:55744/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>unity复习手册</copyright><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>C#语法</title>
-        <link>http://localhost:55744/p/my-first-post/</link>
+        <link>http://localhost:1313/p/my-first-post/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:55744/p/my-first-post/</guid>
-        <description>&lt;h3 id=&#34;变量&#34;&gt;&lt;em&gt;&lt;strong&gt;变量&lt;/strong&gt;&lt;/em&gt;
-&lt;/h3&gt;&lt;p&gt;变量分为引用了类型和值类型，一下是他们的主要区别：&lt;br&gt;
-1.内存分配：&lt;br&gt;
+        <guid>http://localhost:1313/p/my-first-post/</guid>
+        <description>&lt;h2 id=&#34;变量&#34;&gt;&lt;em&gt;&lt;strong&gt;变量&lt;/strong&gt;&lt;/em&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;变量包括引用类型和值类型&#34;&gt;变量包括引用类型和值类型
+&lt;/h3&gt;&lt;p&gt;1.内存分配：&lt;br&gt;
 值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据&lt;br&gt;
 引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。&lt;br&gt;
 2.生命周期&lt;br&gt;
@@ -25,7 +25,22 @@
 4.类型举例&lt;br&gt;
 值类型：int float bool char double struct enum等，默认值不为空&lt;br&gt;
 引用类型：class string interface delegate array等，默认值为null&lt;/p&gt;
-</description>
+&lt;h4 id=&#34;类型总结&#34;&gt;&lt;em&gt;&lt;strong&gt;类型总结&lt;/strong&gt;&lt;/em&gt;
+&lt;/h4&gt;&lt;p&gt;值类型：直接存储数据，分配在栈上，赋值时创建副本，性能好&lt;br&gt;
+引用类型：存储对象引用，分配在堆上，赋值时共享引用，性能差，需要GC管理内存，适合存储大量的数据。&lt;/p&gt;
+&lt;h3 id=&#34;变量作用域&#34;&gt;变量作用域
+&lt;/h3&gt;&lt;p&gt;变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见
+静态变量是类级别上声明的整个类中可见&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;--unity-面试复习&#34;&gt;title: C#语法
+slug:  my-first-post
+#date:  2025-02-12
+#description: unity知识点复习
+categories:
+- C#
+tags :
+- unity 面试复习
+&lt;/h2&gt;</description>
         </item>
         
     </channel>
