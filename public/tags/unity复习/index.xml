@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Unity on 黄春荣</title>
-        <link>http://localhost:1313/categories/unity/</link>
-        <description>Recent content in Unity on 黄春荣</description>
+        <title>Unity复习 on 黄春荣</title>
+        <link>http://localhost:1313/tags/unity%E5%A4%8D%E4%B9%A0/</link>
+        <description>Recent content in Unity复习 on 黄春荣</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>unity复习手册</copyright>
-        <lastBuildDate>Wed, 12 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/unity/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Unity复习手册</title>
+        <lastBuildDate>Wed, 12 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/unity%E5%A4%8D%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>C#语法</title>
         <link>http://localhost:1313/p/my-first-post/</link>
         <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
         

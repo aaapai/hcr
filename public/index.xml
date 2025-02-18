@@ -2,36 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>黄春荣</title>
-        <link>http://localhost:1313/</link>
+        <link>http://localhost:55744/</link>
         <description>Recent content on 黄春荣</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>unity复习手册</copyright>
-        <lastBuildDate>Wed, 12 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Unity复习手册</title>
-        <link>http://localhost:1313/p/my-first-post/</link>
-        <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/p/my-first-post/</guid>
-        <description>&lt;h1 id=&#34;unity&#34;&gt;unity
-&lt;/h1&gt;&lt;h2 id=&#34;编程基础&#34;&gt;编程基础
-&lt;/h2&gt;&lt;p&gt;准备找工作了，复习unity，忘记了好多东西&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Fri, 09 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:55744/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Archives</title>
-        <link>http://localhost:1313/archives/</link>
+        <link>http://localhost:55744/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/archives/</guid>
+        <guid>http://localhost:55744/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>about</title>
-        <link>http://localhost:1313/about/</link>
+        <link>http://localhost:55744/about/</link>
         <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/about/</guid>
+        <guid>http://localhost:55744/about/</guid>
         <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Apache License 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
 &lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
@@ -55,11 +44,32 @@
 </description>
         </item>
         <item>
-        <title>Links</title>
-        <link>http://localhost:1313/links/</link>
+        <title>C#语法</title>
+        <link>http://localhost:55744/p/my-first-post/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/links/</guid>
+        <guid>http://localhost:55744/p/my-first-post/</guid>
+        <description>&lt;h3 id=&#34;变量&#34;&gt;&lt;em&gt;&lt;strong&gt;变量&lt;/strong&gt;&lt;/em&gt;
+&lt;/h3&gt;&lt;p&gt;变量分为引用了类型和值类型，一下是他们的主要区别：&lt;br&gt;
+1.内存分配：&lt;br&gt;
+值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据&lt;br&gt;
+引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。&lt;br&gt;
+2.生命周期&lt;br&gt;
+值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 &lt;br&gt;
+3.装箱与拆箱&lt;br&gt;
+装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。&lt;br&gt;
+拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换&lt;br&gt;
+4.类型举例&lt;br&gt;
+值类型：int float bool char double struct enum等，默认值不为空&lt;br&gt;
+引用类型：class string interface delegate array等，默认值为null&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Links</title>
+        <link>http://localhost:55744/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:55744/links/</guid>
         <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -91,10 +101,10 @@
         </item>
         <item>
         <title>Search</title>
-        <link>http://localhost:1313/search/</link>
+        <link>http://localhost:55744/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/search/</guid>
+        <guid>http://localhost:55744/search/</guid>
         <description></description>
         </item>
         

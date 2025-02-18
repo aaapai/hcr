@@ -1,9 +1,9 @@
 ---
 title: Links
 links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
+  - title: picoMRTK基础配置
+    description: 运动,ui,抓取已配置。
+    website: https://gitee.com/huangpaipai/mrtk_-pico-template.git
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
   - title: TypeScript
     description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.

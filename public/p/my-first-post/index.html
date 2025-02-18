@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="unity知识点复习">
-<title>Unity复习手册</title>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=55744&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="变量\r变量分为引用了类型和值类型，一下是他们的主要区别：\n1.内存分配：\n值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据\n引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。\n2.生命周期\n值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 3.装箱与拆箱\n装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。\n拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换\n4.类型举例\n值类型：int float bool char double struct enum等，默认值不为空\n引用类型：class string interface delegate array等，默认值为null\n">
+<title>C#语法</title>
 
-<link rel='canonical' href='http://localhost:1313/p/my-first-post/'>
+<link rel='canonical' href='http://localhost:55744/p/my-first-post/'>
 
-<link rel="stylesheet" href="/scss/style.min.b303a68274bee2734650a20cbd1263b6f734092995cba66de1b70f7637692147.css"><meta property='og:title' content="Unity复习手册">
-<meta property='og:description' content="unity知识点复习">
-<meta property='og:url' content='http://localhost:1313/p/my-first-post/'>
+<link rel="stylesheet" href="/scss/style.min.b303a68274bee2734650a20cbd1263b6f734092995cba66de1b70f7637692147.css"><meta property='og:title' content="C#语法">
+<meta property='og:description' content="变量\r变量分为引用了类型和值类型，一下是他们的主要区别：\n1.内存分配：\n值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据\n引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。\n2.生命周期\n值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 3.装箱与拆箱\n装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。\n拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换\n4.类型举例\n值类型：int float bool char double struct enum等，默认值不为空\n引用类型：class string interface delegate array等，默认值为null\n">
+<meta property='og:url' content='http://localhost:55744/p/my-first-post/'>
 <meta property='og:site_name' content='黄春荣'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='unity基础' />
-<meta name="twitter:title" content="Unity复习手册">
-<meta name="twitter:description" content="unity知识点复习">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='unity 面试复习' />
+<meta name="twitter:title" content="C#语法">
+<meta name="twitter:description" content="变量\r变量分为引用了类型和值类型，一下是他们的主要区别：\n1.内存分配：\n值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据\n引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。\n2.生命周期\n值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 3.装箱与拆箱\n装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。\n拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换\n4.类型举例\n值类型：int float bool char double struct enum等，默认值不为空\n引用类型：class string interface delegate array等，默认值为null\n">
     </head>
     <body class="
     article-page
@@ -100,6 +100,45 @@
         
         
         <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>about</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
             <a href='/search/' >
                 
                 
@@ -114,6 +153,25 @@
 
                 
                 <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
             </a>
         </li>
         
@@ -168,7 +226,11 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#编程基础">编程基础</a></li>
+    <li>
+      <ol>
+        <li><a href="#变量"><em><strong>变量</strong></em></a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -187,8 +249,8 @@
     
     <header class="article-category">
         
-            <a href="/categories/unity/" >
-                Unity
+            <a href="/categories/c%23/" >
+                C#
             </a>
         
     </header>
@@ -196,13 +258,9 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/my-first-post/">Unity复习手册</a>
+            <a href="/p/my-first-post/">C#语法</a>
         </h2>
     
-        
-        <h3 class="article-subtitle">
-            unity知识点复习
-        </h3>
         
     </div>
 
@@ -211,19 +269,6 @@
     
     
     <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Feb 12, 2025</time>
-            </div>
         
 
         
@@ -252,9 +297,19 @@
     <section class="article-content">
     
     
-    <h1 id="unity">unity
-</h1><h2 id="编程基础">编程基础
-</h2><p>准备找工作了，复习unity，忘记了好多东西</p>
+    <h3 id="变量"><em><strong>变量</strong></em>
+</h3><p>变量分为引用了类型和值类型，一下是他们的主要区别：<br>
+1.内存分配：<br>
+值类型的变量直接存储数据，通常分配在栈上，栈内存的分配和释放速度较快，适合存储较小的数据<br>
+引用类型的变量存储的是对象的引用（内存地址），而实际上数据存储在堆上，堆内存的分配和释放速度较慢，适合存储大量的数据。<br>
+2.生命周期<br>
+值类型的变量在使用完毕后会被自动回收，而引用类型的变量需要垃圾回收机制（GC）来管理内存。 <br>
+3.装箱与拆箱<br>
+装箱：将值类型转换为引用类型。装箱会创建一个新的对象，并将值类型的数据复制到该对象中。<br>
+拆箱：将引用类型转换为值类型。拆箱会从对象中复制数据到值类型变量中。拆箱需要显式类型转换<br>
+4.类型举例<br>
+值类型：int float bool char double struct enum等，默认值不为空<br>
+引用类型：class string interface delegate array等，默认值为null</p>
 
 </section>
 
@@ -263,7 +318,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/unity%E5%9F%BA%E7%A1%80/">Unity基础</a>
+            <a href="/tags/unity-%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0/">Unity 面试复习</a>
         
     </section>
 
