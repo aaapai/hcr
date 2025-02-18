@@ -45,10 +45,10 @@
         </item>
         <item>
         <title>C#语法</title>
-        <link>http://localhost:1313/p/my-first-post/</link>
+        <link>http://localhost:1313/p/unity01/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/my-first-post/</guid>
+        <guid>http://localhost:1313/p/unity01/</guid>
         <description>&lt;h2 id=&#34;变量&#34;&gt;&lt;em&gt;&lt;strong&gt;变量&lt;/strong&gt;&lt;/em&gt;
 &lt;/h2&gt;&lt;h3 id=&#34;变量包括引用类型和值类型&#34;&gt;变量包括引用类型和值类型
 &lt;/h3&gt;&lt;p&gt;1.内存分配：&lt;br&gt;
@@ -69,6 +69,24 @@
 &lt;/h3&gt;&lt;p&gt;变量的作用域通常由花括号{}决定，在if、for、方法等代码块内声明的是局部变量只在声明他们的代码块中可见
 静态变量是类级别上声明的整个类中可见&lt;/p&gt;
 </description>
+        </item>
+        <item>
+        <title>C#语法</title>
+        <link>http://localhost:1313/p/unity02/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/unity02/</guid>
+        <description>&lt;h3 id=&#34;新的测试&#34;&gt;新的测试
+&lt;/h3&gt;</description>
+        </item>
+        <item>
+        <title>C#语法</title>
+        <link>http://localhost:1313/p/unity03/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/unity03/</guid>
+        <description>&lt;h3 id=&#34;新的测试&#34;&gt;新的测试
+&lt;/h3&gt;</description>
         </item>
         <item>
         <title>Links</title>
