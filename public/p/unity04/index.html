@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="方法\r">
-<title>C#语法_结构体和枚举</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="委托类型：存有方法的引用，派生自system.Dlegate\r声明：访问修饰符 delegate 返回类型 委托名(参数列表); 赋值：委托类型 委托实例名=new 委托类型(方法名); 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 public delegate void num(string s); //static num ps1 = new num(Program.output); //或者 static num ps1 =Program.Output; static void Main(string[] args) { ps1+=OutputDouble; ps1.Invoke(&#34;aaa&#34;); Program.ps1 -= output; ps1?.Invoke(&#34;bbb&#34;); Console.ReadLine(); } static void Output(string s) { Console.WriteLine(s); } static void OutputDouble(string s) { Console.WriteLine(s+s); } 事件\r*声明：访问修饰符 event 委托类型 事件名；\n使用事件有三个步骤：定义事件、订阅事件和触发事件。\n">
+<title>C#语法_委托与事件</title>
 
 <link rel='canonical' href='http://localhost:1313/p/unity04/'>
 
-<link rel="stylesheet" href="/scss/style.min.b303a68274bee2734650a20cbd1263b6f734092995cba66de1b70f7637692147.css"><meta property='og:title' content="C#语法_结构体和枚举">
-<meta property='og:description' content="方法\r">
+<link rel="stylesheet" href="/scss/style.min.b303a68274bee2734650a20cbd1263b6f734092995cba66de1b70f7637692147.css"><meta property='og:title' content="C#语法_委托与事件">
+<meta property='og:description' content="委托类型：存有方法的引用，派生自system.Dlegate\r声明：访问修饰符 delegate 返回类型 委托名(参数列表); 赋值：委托类型 委托实例名=new 委托类型(方法名); 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 public delegate void num(string s); //static num ps1 = new num(Program.output); //或者 static num ps1 =Program.Output; static void Main(string[] args) { ps1+=OutputDouble; ps1.Invoke(&#34;aaa&#34;); Program.ps1 -= output; ps1?.Invoke(&#34;bbb&#34;); Console.ReadLine(); } static void Output(string s) { Console.WriteLine(s); } static void OutputDouble(string s) { Console.WriteLine(s+s); } 事件\r*声明：访问修饰符 event 委托类型 事件名；\n使用事件有三个步骤：定义事件、订阅事件和触发事件。\n">
 <meta property='og:url' content='http://localhost:1313/p/unity04/'>
 <meta property='og:site_name' content='黄春荣'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='unity 面试复习' />
-<meta name="twitter:title" content="C#语法_结构体和枚举">
-<meta name="twitter:description" content="方法\r">
+<meta name="twitter:title" content="C#语法_委托与事件">
+<meta name="twitter:description" content="委托类型：存有方法的引用，派生自system.Dlegate\r声明：访问修饰符 delegate 返回类型 委托名(参数列表); 赋值：委托类型 委托实例名=new 委托类型(方法名); 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 public delegate void num(string s); //static num ps1 = new num(Program.output); //或者 static num ps1 =Program.Output; static void Main(string[] args) { ps1+=OutputDouble; ps1.Invoke(&#34;aaa&#34;); Program.ps1 -= output; ps1?.Invoke(&#34;bbb&#34;); Console.ReadLine(); } static void Output(string s) { Console.WriteLine(s); } static void OutputDouble(string s) { Console.WriteLine(s+s); } 事件\r*声明：访问修饰符 event 委托类型 事件名；\n使用事件有三个步骤：定义事件、订阅事件和触发事件。\n">
     </head>
     <body class="
     article-page
@@ -221,7 +221,13 @@
   <ol>
     <li>
       <ol>
-        <li><a href="#方法">方法</a></li>
+        <li><a href="#委托类型存有方法的引用派生自systemdlegate">委托类型：存有方法的引用，派生自system.Dlegate</a></li>
+        <li><a href="#事件">事件</a></li>
+        <li><a href="#c的action">C#的Action</a></li>
+        <li><a href="#c的action泛型版本">C#的Action泛型版本</a></li>
+        <li><a href="#c的func">C#的Func</a></li>
+        <li><a href="#c的eventargs">C#的EventArgs</a></li>
+        <li><a href="#c的eventhandler">C#的EventHandler</a></li>
       </ol>
     </li>
   </ol>
@@ -251,7 +257,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/unity04/">C#语法_结构体和枚举</a>
+            <a href="/p/unity04/">C#语法_委托与事件</a>
         </h2>
     
         
@@ -275,7 +281,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 3 分钟
                 </time>
             </div>
         
@@ -290,8 +296,503 @@
     <section class="article-content">
     
     
-    <h3 id="方法">方法
-</h3>
+    <h3 id="委托类型存有方法的引用派生自systemdlegate">委托类型：存有方法的引用，派生自system.Dlegate
+</h3><ul>
+<li>声明：访问修饰符 delegate 返回类型 委托名(参数列表);</li>
+<li>赋值：委托类型 委托实例名=new 委托类型(方法名);</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl">        <span class="kd">public</span> <span class="k">delegate</span> <span class="k">void</span> <span class="n">num</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//static num ps1 = new num(Program.output);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//或者</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">static</span> <span class="n">num</span> <span class="n">ps1</span> <span class="p">=</span><span class="n">Program</span><span class="p">.</span><span class="n">Output</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">       
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">ps1</span><span class="p">+=</span><span class="n">OutputDouble</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ps1</span><span class="p">.</span><span class="n">Invoke</span><span class="p">(</span><span class="s">&#34;aaa&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="n">Program</span><span class="p">.</span><span class="n">ps1</span> <span class="p">-=</span> <span class="n">output</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ps1</span><span class="p">?.</span><span class="n">Invoke</span><span class="p">(</span><span class="s">&#34;bbb&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="kd">static</span> <span class="k">void</span> <span class="n">Output</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">static</span> <span class="k">void</span> <span class="n">OutputDouble</span><span class="p">(</span><span class="kt">string</span> <span class="n">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">+</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="事件">事件
+</h3><p>*声明：访问修饰符 event 委托类型 事件名；<br>
+使用事件有三个步骤：定义事件、订阅事件和触发事件。</p>
+<ul>
+<li>1.定义事件：<br>
+定义事件需要一个事先定义一个委托类型来指定事件处理方法的签名；<br>
+对于不需要传递额外信息的简单事件，可以直接使用.net提供的EventHandler委托</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">Publisher</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 基于预定义的EventHandler定义事件</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">event</span> <span class="n">EventHandler</span> <span class="n">SomethingHappened</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">protected</span> <span class="k">virtual</span> <span class="k">void</span> <span class="n">OnSomethingHappened</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 检查是否有订阅者</span>
+</span></span><span class="line"><span class="cl">        <span class="n">SomethingHappened</span><span class="p">?.</span><span class="n">Invoke</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">EventArgs</span><span class="p">.</span><span class="n">Empty</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">DoSomething</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 执行一些操作...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Publisher is doing something...&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">// 触发事件</span>
+</span></span><span class="line"><span class="cl">        <span class="n">OnSomethingHappened</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果需要传递自定义数据，可以创建继承自EventArgs的新类，并使用泛型版本的EventHandler<TEventArgs>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">CustomEventArgs</span> <span class="p">:</span> <span class="n">EventArgs</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">Message</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">CustomEventArgs</span><span class="p">(</span><span class="kt">string</span> <span class="n">message</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Message</span> <span class="p">=</span> <span class="n">message</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">Publisher</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 使用自定义EventArgs定义事件</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">event</span> <span class="n">EventHandler</span><span class="p">&lt;</span><span class="n">CustomEventArgs</span><span class="p">&gt;</span> <span class="n">SomethingHappened</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">protected</span> <span class="k">virtual</span> <span class="k">void</span> <span class="n">OnSomethingHappened</span><span class="p">(</span><span class="n">CustomEventArgs</span> <span class="n">e</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">SomethingHappened</span><span class="p">?.</span><span class="n">Invoke</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">DoSomething</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Publisher is doing something...&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">OnSomethingHappened</span><span class="p">(</span><span class="k">new</span> <span class="n">CustomEventArgs</span><span class="p">(</span><span class="s">&#34;A custom message&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>2.订阅事件<br>
+订阅事件就是注册一个当事件发生时应该执行的方法。用+=运算符完成比较方便：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">Subscriber</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">Subscriber</span><span class="p">(</span><span class="n">Publisher</span> <span class="n">publisher</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 订阅事件</span>
+</span></span><span class="line"><span class="cl">        <span class="n">publisher</span><span class="p">.</span><span class="n">SomethingHappened</span> <span class="p">+=</span> <span class="n">HandleSomethingHappened</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">void</span> <span class="n">HandleSomethingHappened</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">e</span> <span class="k">is</span> <span class="n">CustomEventArgs</span> <span class="n">customEventArgs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Received message: {customEventArgs.Message}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;Event received!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>3.触发事件<br>
+事件由发布者触发。例如，在上述例子中，Publisher类中的DoSomething方法会在适当时候调用OnSomethingHappened方法来触发事件：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Program</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">publisher</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Publisher</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">subscriber</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Subscriber</span><span class="p">(</span><span class="n">publisher</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">publisher</span><span class="p">.</span><span class="n">DoSomething</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">ReadKey</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="c的action">C#的Action
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">namespace</span> <span class="nn">System</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 摘要:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     封装一个方法，该方法不具有参数且不返回值。</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [TypeForwardedFrom(&#34;System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089&#34;)]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">delegate</span> <span class="k">void</span> <span class="n">Action</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="c的action泛型版本">C#的Action泛型版本
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">namespace</span> <span class="nn">System</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 摘要:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     封装一个方法，该方法只有一个参数并且不返回值。 若要浏览此类型的.NET Framework 源代码，请参阅Reference Source。</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 参数:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//   obj:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     此委托封装的方法的参数。</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 类型参数:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//   T:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     此委托封装的方法的参数类型。</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">delegate</span> <span class="k">void</span> <span class="n">Action</span><span class="p">&lt;</span><span class="k">in</span> <span class="n">T</span><span class="p">&gt;(</span><span class="n">T</span> <span class="n">obj</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="c的func">C#的Func
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">namespace</span> <span class="nn">System</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//这个是fun的十六个重载中的一个参数一个返回值的泛型重载</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 摘要:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     封装一个方法，该方法具有一个参数，且返回由 TResult 参数指定的类型的值。 若要浏览此类型的.NET Framework 源代码，请参阅Reference</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     Source。</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 参数:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//   arg:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     此委托封装的方法的参数。</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 类型参数:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//   T:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     此委托封装的方法的参数类型。</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//   TResult:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     此委托封装的方法的返回值类型。</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 返回结果:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     此委托封装的方法的返回值。</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [TypeForwardedFrom(&#34;System.Core, Version=3.5.0.0, Culture=Neutral, PublicKeyToken=b77a5c561934e089&#34;)]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">delegate</span> <span class="n">TResult</span> <span class="n">Func</span><span class="p">&lt;</span><span class="k">in</span> <span class="n">T</span><span class="p">,</span> <span class="k">out</span> <span class="n">TResult</span><span class="p">&gt;(</span><span class="n">T</span> <span class="n">arg</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>这两个都是委托。如果要使用的方法有参数的话，就选择不同的个数的重载，参数可以选择0个到16个，在unity里面只能4个</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Action</th>
+          <th>Func&lt;&gt;</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>封装的方法，无返回值</td>
+          <td>封装的方法，有返回值</td>
+      </tr>
+  </tbody>
+</table></div>
+</li>
+<li>
+<p>unity里面的Action和Func&lt;&gt;，参数最多四个</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>UnityAction</th>
+          <th>UnityFunc&lt;&gt;</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>封装的方法，无返回值</td>
+          <td>封装的方法，有返回值</td>
+      </tr>
+  </tbody>
+</table></div>
+</li>
+<li>
+<p>小拓展：UnityEvent和Event,unity魔改过后的好处是unity将其序列化了，在检视面板可视化编辑<br>
+<a class="link" href="https://blog.dctewi.com/2020/02/unityevent-vs-csharpevent/"  target="_blank" rel="noopener"
+    >unityEvent和C#Event对比</a><br>
+<a class="link" href="https://gwb.tencent.com/community/detail/125723"  target="_blank" rel="noopener"
+    >UnityAction和C#Action对比</a></p>
+</li>
+</ul>
+<h3 id="c的eventargs">C#的EventArgs
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">namespace</span> <span class="nn">System</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 摘要:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     表示包含事件数据的类的基类，并提供用于不包含事件数据的事件的值。</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [ComVisible(true)]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">class</span> <span class="nc">EventArgs</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 摘要:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//     提供用于与不包含事件数据的事件的值。</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">static</span> <span class="k">readonly</span> <span class="n">EventArgs</span> <span class="n">Empty</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 摘要:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//     初始化 System.EventArgs 类的新实例。</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">EventArgs</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="c的eventhandler">C#的EventHandler
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">namespace</span> <span class="nn">System</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 摘要:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     表示将用于处理不具有事件数据的事件的方法。</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 参数:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//   sender:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     事件源。</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//   e:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//     不包含事件数据的对象。</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [ComVisible(true)]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">delegate</span> <span class="k">void</span> <span class="n">EventHandler</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
