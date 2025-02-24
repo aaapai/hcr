@@ -14,6 +14,14 @@
         <guid>http://localhost:1313/categories/c%23/</guid>
         <description></description>
         </item>
+        <item>
+        <title>设计模式</title>
+        <link>http://localhost:1313/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+        <description></description>
+        </item>
         
     </channel>
 </rss>
