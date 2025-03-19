@@ -436,7 +436,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;这两个都是委托。如果要使用的方法有参数的话，就选择不同的个数的重载，参数可以选择0个到16个，在unity里面只能4个&lt;/p&gt;
+&lt;p&gt;这两个都是委托。如果要使用的方法有参数的话，就选择不同的个数的重载，参数可以选择0个到16个&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
